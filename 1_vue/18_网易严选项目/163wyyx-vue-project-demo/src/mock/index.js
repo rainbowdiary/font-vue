@@ -1,0 +1,7 @@
+const category = require("./data/category.json")
+const categoryList = require("./data/categoryList.json")
+const homeData = require("./data/homeData.json")
+const Mock = require('mockjs')
+Mock.mock("/api/category", { errno: 0, body: category })
+Mock.mock("/api/categoryList", { errno: 0, body: categoryList })
+Mock.mock("/api/homeData", { errno: 0, body: homeData })

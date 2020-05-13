@@ -1,0 +1,23 @@
+{
+  "id": "1627883",
+  "name": "test",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "12319379",
+      "name": "箭头-小-上",
+      "font_class": "jiantou-xiao-shang",
+      "unicode": "e7ad",
+      "unicode_decimal": 59309
+    },
+    {
+      "icon_id": "12319381",
+      "name": "箭头-小-下",
+      "font_class": "jiantou-xiao-xia",
+      "unicode": "e7ae",
+      "unicode_decimal": 59310
+    }
+  ]
+}

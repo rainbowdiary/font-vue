@@ -1,0 +1,32 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
+<!--
+2013-9-30: Created.
+-->
+<svg>
+<metadata>
+Created by iconfont
+</metadata>
+<defs>
+
+<font id="iconfont" horiz-adv-x="1024" >
+  <font-face
+    font-family="iconfont"
+    font-weight="500"
+    font-stretch="normal"
+    units-per-em="1024"
+    ascent="896"
+    descent="-128"
+  />
+    <missing-glyph />
+    
+    <glyph glyph-name="jiantou-xiao-shang" unicode="&#59309;" d="M498.987 498.594L317.417 315.77c-9.89-9.958-9.89-26.015 0-35.973l0.258-0.259c9.825-9.893 25.76-10.058 35.787-0.445l0.454 0.445L517 443.75 680.084 279.54c9.825-9.893 25.76-10.058 35.788-0.445l0.453 0.445 0.258 0.26c9.89 9.957 9.89 26.014 0 35.972L535.165 498.443c-9.949 10.017-26.146 10.084-36.178 0.15z"  horiz-adv-x="1024" />
+
+    
+    <glyph glyph-name="jiantou-xiao-xia" unicode="&#59310;" d="M498.987 269.406L317.417 452.23c-9.89 9.958-9.89 26.015 0 35.973l0.258 0.259c9.825 9.893 25.76 10.058 35.787 0.445l0.454-0.445L517 324.25 680.084 488.46c9.825 9.893 25.76 10.058 35.788 0.445l0.453-0.445 0.258-0.26c9.89-9.957 9.89-26.014 0-35.972L535.165 269.557c-9.949-10.017-26.146-10.084-36.178-0.15z"  horiz-adv-x="1024" />
+
+    
+
+
+  </font>
+</defs></svg>

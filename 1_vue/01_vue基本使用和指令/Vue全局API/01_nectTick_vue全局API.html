@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vue.nextTick</title>
+  <script src="../js/vue.js"></script>
+</head>
+
+<body>
+  <div id="root">{{message}}</div>
+
+  <script>
+    /* 
+    为什么使用 Vue.nextTick之后结果是true，使用之前是false呢，明明页面已经更新了
+      因为： Vue在更新DOM时是异步执行的，
+            侦听到数据变化，Vue将开启一个队列，
+              并缓冲在同一事件循环中发生的所有数据变更，
+              如果同一个watcher被多次触发，只会被推入到队列一次。避免不必要的计算和DOM操作。
+            在下一个的事件循环'tick'中，Vue刷新队列并执行实际（已去重的）工作。
+            异步的使用Promise.then(),MutationObserver和setImmediate
+      nextTick: 在DOM下次更新循环结束后执行延迟回调。
+
+
+      问题1： v-model的数据是双向数据绑定，页面数据已经更新了，为什么还要使用nextTick呢? 
+              */
+    var vm = new Vue({
+      el: "#root",
+      data: {
+        message: "123"
+      }
+    })
+    vm.message = 'new message';
+    console.log(vm.$el.textContent === 'new1 message'); //false
+    Vue.nextTick(function () {
+      console.log(vm.$el.textContent === 'new1 message'); //true
+    })
+
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="./js/vue.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <!--
+        v-show： 使用css的display属性，进行条件渲染
+                 为真值：{display:block} 假值：{display: none}
+                性能比v-if好，不会进行重排重绘
+
+        v-if/v-else: 通过删除元素添加元素实现条件渲染
+        -->
+
+
+    <p v-show="flag">v-show</p>
+    <p v-if="!flag">v-if</p>
+    <p v-else-if="!flag">else-if</p>
+    <p v-else>v-else</p>
+  </div>
+</body>
+<script>
+  Vue.config.productionTip = false
+  // 声明式编程
+  var vm = new Vue({
+    el: "#app",
+    data: {
+      flag: true
+    }
+  })
+</script>
+
+</html>

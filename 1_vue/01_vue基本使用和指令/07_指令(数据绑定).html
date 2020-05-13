@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="./js/vue.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <p v-text="msg"></p>     <!-- v-text： 更新元素里面的内容innerHTML -->
+    <p>周{{msg}}</p> 
+    <p v-html="msg"></p>     <!-- v-html: 可以充当元素标签使用 -->
+  </div>
+</body>
+<script>
+  // 声明式编程
+  var vm = new Vue({
+    el: "#app",
+    data: {
+      msg: "<strong>冬雨</strong>"
+    }
+  })
+</script>
+
+</html>

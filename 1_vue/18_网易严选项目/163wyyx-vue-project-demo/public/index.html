@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="viewport"
+    content="width=device-width,initial-scale=2.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+
+  <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+
+  <link rel="stylesheet" href="/css/reset.css">
+  <link rel="stylesheet" href="http://at.alicdn.com/t/font_1116984_p8yvjaygsbb.css">
+  <script src="https://as.alipayobjects.com/g/component/fastclick/1.0.6/fastclick.js"></script>
+  <script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>
+  <title>163wyyx-vue-project</title>
+
+</head>
+
+<body>
+  <noscript>
+    <strong>We're sorry but 163wyyx-vue-project doesn't work properly without JavaScript enabled. Please enable it to
+      continue.</strong>
+  </noscript>
+  <div id="app"></div>
+  <!-- built files will be auto injected -->
+  <script>
+    if ('addEventListener' in document) {
+      document.addEventListener('DOMContentLoaded', function () {
+        FastClick.attach(document.body);
+      }, false);
+    }
+
+
+    // rem适配
+    (function () {
+      let width = document.documentElement.clientWidth;
+      const styleNode = document.createElement('style');
+      styleNode.innerHTML = 'html{font-size: ' + width / 10 + 'px  !important;}';
+      document.head.appendChild(styleNode);
+    })();
+   /* 
+   rem是相对于根元素html的font-size来做计算。
+   物理像素:375px
+   1rem = 37.5px  10rem=375px
+   */
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>02_ref属性-1</title>
+  <!--
+       组件上的所有事件都是vue自定义事件
+    -->
+</head>
+
+<body>
+  <div id="app">
+
+  </div>
+</body>
+<script src="../js/vue.js"></script>
+<script type="application/javascript">
+
+  const counter = {
+    template: `<div>
+      <p>click me</p><p>click me</p><p>click me</p><p>click me</p><p>click me</p><p>click me</p><p>click me</p><p>click me</p>
+    </div> `
+  }
+
+  var app = new Vue({
+    el: "#app",
+    template: `<div>123
+      <counter @click.native="handleC"></counter>
+    </div>`,
+    components: { counter },
+    methods: {
+      handleC() {
+        console.log("root - handleC")
+      }
+    }
+  })
+
+  /*
+  @click.native事件修饰符 ：在组件根标签监听原生事件，在组件标签上定义，在父组件定义methods
+  点击组件任何地方都会触发事件，给普通的html标签定义是没效果的。
+  作用： 在父组件中给子组件绑定事件，让子组件变成普通的html标签，来绑定原生事件
+
+  多层子组件嵌套使用.native修饰符也可以
+    <div>
+      <el-form :model="loginForm" ref="loginForm">
+        <el-form-item>
+          <el-button type="primary" :loading="logining" @click.native.prevent="onSubmit">登录</el-button>
+      </el-form>
+    </div>
+   */
+
+</script>
+
+</html>

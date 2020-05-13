@@ -1,0 +1,5 @@
+var data = require("./data")
+var Mock = require('mockjs')
+Mock.mock("/api/seller",data.seller)
+Mock.mock("/api/goods",data.goods)
+Mock.mock("/api/ratings",data.ratings)

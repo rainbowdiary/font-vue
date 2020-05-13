@@ -1,0 +1,55 @@
+// showCartLists 控制购物车列表的过渡
+.showCartLists-enter
+  opacity 0
+  transform translateY(100%) !important
+.showCartLists-enter-active
+  transition .4s all  linear !important
+.showCartLists-enter-to
+  opacity 1
+  transform translateY(0) !important
+
+.showCartLists-leave
+  // transform translateY(0) !important
+  opacity 1
+  transform translateY(100%) !important
+.showCartLists-leave-active
+  transition .4s all  linear !important
+.showCartLists-leave-to
+  // transform translateY(100%) !important
+  opacity 0
+  transform translateY(0) !important
+
+// 添加商品个数图标动画
+.cartControlRemove-enter
+  opacity 0 !important
+  transform translate3d(48px,0,0) rotate(0deg) !important
+.cartControlRemove-enter-active
+  transition 3s all !important 
+.cartControlRemove-enter-to
+  opacity 1 !important
+  transform translate3d(0,0,0) rotate(-720deg) !important
+
+// 没有生效
+.cartControlRemove-leave
+  opacity 1 !important
+  transform translate3d(0,0,0) rotate(-720deg) !important
+.cartControlRemove-leave-active !important
+  transition 3s all !important
+.cartControlRemove-leave-to !important
+  opacity 0 !important
+  transform translate3d(48px,0,0) rotate(0deg) !important
+ 
+// 遮罩层动画
+.mask-enter
+    opacity 0
+.mask-enter-active
+    transition opacity 1s  
+.mask-enter-to 
+  opacity 1
+
+.mask-leave
+    opacity 1
+.mask-leave-active
+  transition opacity 1s  
+.mask-leave-to
+  opacity 0
